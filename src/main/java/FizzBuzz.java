@@ -2,7 +2,13 @@ public class FizzBuzz {
     static String fizzBuzz(int number) {
         String result = "";
         boolean ignoreFizz = false;
-        if (String.valueOf(number).contains("5")) {
+        boolean ignoreContain5 = false;
+
+        if(String.valueOf(number).contains("7")){
+            ignoreContain5 = true;
+        }
+
+        if (!ignoreContain5 && String.valueOf(number).contains("5")) {
             ignoreFizz = true;
         }
         if (!ignoreFizz && (isFizz(number) || String.valueOf(number).contains("3"))) {
