@@ -1,13 +1,13 @@
 public class FizzBuzz {
     static String fizzBuzz(int number) {
         String result = "";
-        if (isFizz(number)) {
+        if (isFizz(number) || String.valueOf(number).contains("3")) {
             result += "Fizz";
         }
-        if (isBuzz(number)) {
+        if (isBuzz(number)|| String.valueOf(number).contains("5")) {
             result += "Buzz";
         }
-        if (isWhizz(number)) {
+        if (isWhizz(number)|| String.valueOf(number).contains("7")) {
             result += "Whizz";
         }
         if(result.equals("")){
