@@ -8,31 +8,31 @@ public class FizzBuzz {
         boolean canContain3 = true;
         boolean canContain5 = true;
 
-        if (contains7(number)) {
+        if (contains(number, "7")) {
             canBuzz = false;
             canContain5 = false;
         }
 
-        if (canContain5 && contains5(number)) {
+        if (canContain5 && contains(number,"5")) {
             canContain3 = false;
             canFizz = false;
         }
 
-        if (canContain3 && contains3(number)) {
+        if (canContain3 && contains(number,"3")) {
             canFizz = false;
             canBuzz = false;
             canWhizz = false;
         }
 
-        if ((canFizz && isFizz(number)) || (canContain3 && contains3(number))) {
+        if ((canFizz && canMultipliedBy(number,3)) || (canContain3 && contains(number,"3"))) {
             result += "Fizz";
         }
 
-        if (canBuzz && isBuzz(number)) {
+        if (canBuzz && canMultipliedBy(number,5)) {
             result += "Buzz";
         }
 
-        if (canWhizz && isWhizz(number)) {
+        if (canWhizz && canMultipliedBy(number, 7)) {
             result += "Whizz";
         }
 
@@ -43,27 +43,11 @@ public class FizzBuzz {
         return result;
     }
 
-    private static boolean contains3(int number) {
-        return String.valueOf(number).contains("3");
+    private static boolean contains(int number, String matchString) {
+        return String.valueOf(number).contains(matchString);
     }
 
-    private static boolean contains5(int number) {
-        return String.valueOf(number).contains("5");
-    }
-
-    private static boolean contains7(int number) {
-        return String.valueOf(number).contains("7");
-    }
-
-    private static boolean isWhizz(int number) {
-        return number % 7 == 0;
-    }
-
-    private static boolean isBuzz(int number) {
-        return number % 5 == 0;
-    }
-
-    private static boolean isFizz(int number) {
-        return number % 3 == 0;
+    private static boolean canMultipliedBy(int number, int dividend) {
+        return number % dividend == 0;
     }
 }
