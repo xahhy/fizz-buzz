@@ -38,4 +38,18 @@ public class FizzBuzzTest {
         String result = FizzBuzz.fizzBuzz(number);
         assertEquals("Buzz", result);
     }
+
+    @Test
+    public void should_return_whizz_when_7() {
+        int number = 7;
+        String result = FizzBuzz.fizzBuzz(number);
+        assertEquals("Whizz", result);
+    }
+
+    @Test
+    public void should_return_whizz_when_14() {
+        int number = 14;
+        String result = FizzBuzz.fizzBuzz(number);
+        assertEquals("Whizz", result);
+    }
 }
