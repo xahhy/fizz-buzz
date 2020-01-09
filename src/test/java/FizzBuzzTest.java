@@ -6,14 +6,21 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_number() {
-        int number = 0;
+        int number = 1;
         String result = FizzBuzz.fizzBuzz(number);
-        assertEquals("0", result);
+        assertEquals("1", result);
     }
 
     @Test
     public void should_return_fizz_when_3() {
         int number = 3;
+        String result = FizzBuzz.fizzBuzz(number);
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void should_return_fizz_when_6() {
+        int number = 6;
         String result = FizzBuzz.fizzBuzz(number);
         assertEquals("Fizz", result);
     }
