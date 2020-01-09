@@ -3,14 +3,15 @@ public class FizzBuzz {
         String result = "";
         if (isFizz(number) || String.valueOf(number).contains("3")) {
             result += "Fizz";
+        }else {
+            if (isBuzz(number) || String.valueOf(number).contains("5")) {
+                result += "Buzz";
+            }
+            if (isWhizz(number) || String.valueOf(number).contains("7")) {
+                result += "Whizz";
+            }
         }
-        if (isBuzz(number)|| String.valueOf(number).contains("5")) {
-            result += "Buzz";
-        }
-        if (isWhizz(number)|| String.valueOf(number).contains("7")) {
-            result += "Whizz";
-        }
-        if(result.equals("")){
+        if (result.equals("")) {
             return String.valueOf(number);
         }
         return result;

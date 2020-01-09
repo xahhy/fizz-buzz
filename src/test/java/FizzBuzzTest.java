@@ -73,4 +73,11 @@ public class FizzBuzzTest {
         String result = FizzBuzz.fizzBuzz(number);
         assertEquals("Whizz", result);
     }
+
+    @Test
+    public void should_return_fizz_when_30() {
+        int number = 30;
+        String result = FizzBuzz.fizzBuzz(number);
+        assertEquals("Fizz", result);
+    }
 }
