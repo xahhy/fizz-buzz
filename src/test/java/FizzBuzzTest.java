@@ -38,4 +38,13 @@ public class FizzBuzzTest {
         String result = FizzBuzz.fizzBuzz(number);
         assertEquals("FizzBuzz", result);
     }
+
+    @Test
+    public void should_return_fizz_when_13() {
+        int number = 13;
+        String result = FizzBuzz.fizzBuzz(number);
+        assertEquals("Fizz", result);
+    }
+
+
 }

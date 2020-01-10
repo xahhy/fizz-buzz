@@ -1,7 +1,7 @@
 public class FizzBuzz {
     static String fizzBuzz(int number) {
         String result = "";
-        if (number % 3 == 0) {
+        if (number % 3 == 0 || String.valueOf(number).contains("3")) {
             result += "Fizz";
         }
         if (number % 5 == 0) {
