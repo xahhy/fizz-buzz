@@ -1,12 +1,18 @@
 public class FizzBuzz {
-    static String fizzBuzz(int number){
-        if(number % 3 == 0){
-            return "Fizz";
-        }else if(number %5 ==0){
-            return "Buzz";
-        }else if(number %7 ==0){
-            return "Whizz";
+    static String fizzBuzz(int number) {
+        String result = "";
+        if (number % 3 == 0) {
+            result += "Fizz";
         }
-        return String.valueOf(number);
+        if (number % 5 == 0) {
+            result += "Buzz";
+        }
+        if (number % 7 == 0) {
+            result += "Whizz";
+        }
+        if(result.equals("")){
+            result = String.valueOf(number);
+        }
+        return result;
     }
 }
