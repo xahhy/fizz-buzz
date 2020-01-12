@@ -63,4 +63,10 @@ public class FizzBuzzTest {
         String result = FizzBuzz.fizzBuzz(35);
         assertEquals("BuzzWhizz", result);
     }
+
+    @Test
+    public void should_ignore_multiplied_by_5_and_contains_5_when_contains_7() {
+        String result = FizzBuzz.fizzBuzz(75);
+        assertEquals("Fizz", result);
+    }
 }
