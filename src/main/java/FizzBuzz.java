@@ -1,6 +1,10 @@
 public class FizzBuzz {
     static String fizzBuzz(int number){
         String result = "";
+        String numberString = String.valueOf(number);
+        if(numberString.contains("3")){
+            return "Fizz";
+        }
         if(number % 3 == 0){
             result += "Fizz";
         }

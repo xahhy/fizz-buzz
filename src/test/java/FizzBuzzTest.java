@@ -47,4 +47,15 @@ public class FizzBuzzTest {
         String result2 = FizzBuzz.fizzBuzz(30);
         assertEquals("FizzBuzz", result2);
     }
+
+    @Test
+    public void should_return_fizz_when_number_contains_3() {
+        String result = FizzBuzz.fizzBuzz(30);
+        assertEquals("Fizz", result);
+
+        String result2 = FizzBuzz.fizzBuzz(13);
+        assertEquals("Fizz", result2);
+    }
+
+
 }
