@@ -1,14 +1,16 @@
 public class FizzBuzz {
     static String fizzBuzz(int number){
+        String result = "";
         if(number % 3 == 0){
-            return "Fizz";
-        }else if(number % 5 == 0){
-            return "Buzz";
+            result += "Fizz";
         }
-        else if(number % 7 == 0){
-            return "Whizz";
+        if(number % 5 == 0){
+            result += "Buzz";
         }
-        return String.valueOf(number);
+        if(number % 7 == 0){
+            result += "Whizz";
+        }
+        return result.isEmpty() ? String.valueOf(number) : result;
     }
 
 }

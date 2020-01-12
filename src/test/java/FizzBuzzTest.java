@@ -39,4 +39,12 @@ public class FizzBuzzTest {
         assertEquals("Whizz", result2);
     }
 
+    @Test
+    public void should_return_fizzbuzz_when_number_can_be_multiplied_by_3_5() {
+        String result = FizzBuzz.fizzBuzz(15);
+        assertEquals("FizzBuzz", result);
+
+        String result2 = FizzBuzz.fizzBuzz(30);
+        assertEquals("FizzBuzz", result2);
+    }
 }
