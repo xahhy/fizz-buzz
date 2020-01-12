@@ -42,10 +42,10 @@ public class FizzBuzzTest {
     @Test
     public void should_return_fizzbuzz_when_number_can_be_multiplied_by_3_5() {
         String result = FizzBuzz.fizzBuzz(15);
-        assertEquals("FizzBuzz", result);
+        assertEquals("Buzz", result);
 
         String result2 = FizzBuzz.fizzBuzz(30);
-        assertEquals("FizzBuzz", result2);
+        assertEquals("Fizz", result2);
     }
 
     @Test
@@ -58,4 +58,9 @@ public class FizzBuzzTest {
     }
 
 
+    @Test
+    public void should_ignore_multipled_by_3_and_contains_3_when_contains_5() {
+        String result = FizzBuzz.fizzBuzz(35);
+        assertEquals("BuzzWhizz", result);
+    }
 }
